@@ -180,7 +180,7 @@ def main():
                 if frame_time - class_start_time >= 2.0:
                     if not char_added_flag: 
                         if predicted_class == 'space':
-                            current_text += "-"
+                            current_text += " "
                         elif predicted_class == 'del':
                             current_text = current_text[:-1]
                         elif predicted_class != 'nothing':
