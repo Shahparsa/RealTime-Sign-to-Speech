@@ -1,15 +1,13 @@
-# Real-Time Sign Language to Speech Translation
+# Real-Time Sign Language Translator
 
-A high-performance Computer Vision and Deep Learning project that translates Sign Language alphabet gestures into text and spoken audio in real-time. Built with a custom Convolutional Neural Network (CNN) in PyTorch and optimized for live webcam inference using OpenCV.
+Developed for the **Artificial Intelligence course at Sharif University of Technology**, this project bridges the communication gap by translating sign language alphabet gestures into text and spoken audio in real-time. We built a custom PyTorch CNN and integrated it with OpenCV for seamless, zero-lag live video inference.
 
-## ✨ Features
-* **Real-Time Recognition:** Captures video feed via webcam and predicts hand gestures instantly without lag.
-* **Custom CNN Architecture:** Engineered from scratch with 4 convolutional blocks, Batch Normalization, Adaptive Pooling, and Dropout layers for high generalization.
-* **Text-to-Speech (TTS):** Integrated `pyttsx3` with multi-threading to read the generated words aloud without freezing the video frame.
-* **Smart Inference Logic:** Includes logic to differentiate between static signs, dynamic spacing ("space"), backspacing ("del"), and word-completion ("nothing").
-* **GPU Accelerated:** Fully optimized for CUDA, utilizing `pin_memory` and smart data loaders to train and infer on NVIDIA GPUs efficiently.
+## Key Features
+- **Zero-Lag Recognition:** Instantly predicts hand gestures directly from your webcam feed.
+- **Custom CNN:** Built from scratch with 4 conv blocks, Batch Normalization, and Dropout for robust real-world generalization.
+- **Speaks for You:** Uses `pyttsx3` with background multi-threading to read signed words out loud without freezing the video stream.
+- **Smart Typing Logic:** Understands dynamic spacing, backspaces ("del"), and word completions to form natural sentences.
 
-## 📊 Model Performance
-The model was trained with dynamic Data Augmentation (Random Rotation, Color Jitter, Affine transformations) and an AdamW optimizer with a ReduceLROnPlateau learning rate scheduler.
-* **Test Accuracy:** ~99.9% on the validation set.
-* **Generalization:** Highly robust to lighting changes and minor hand rotations.
+## Performance
+- **~99.9% Validation Accuracy:** Trained with heavy dynamic data augmentation (color jittering, affine transforms, random rotations) and an AdamW optimizer.
+- **Real-World Ready:** Highly resilient to lighting shifts, background clutter, and natural variations in hand angles.
